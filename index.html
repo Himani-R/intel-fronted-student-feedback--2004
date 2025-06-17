@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Feedback Form</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="wrapper">
+
+  <div class="container">
+    <h1>Student Feedback Form </h1>
+    <form id ="feedbackForm" onsubmit="return validateForm()" method="POST" action="http://localhost:5000/studentFeedback" >
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name"  required />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+       
+      <label for="course">Course:</label>
+      <select id="course" name="course" required>
+        <option value="">--Select Course--</option>
+        <option value="B.Tech">B.Tech</option>
+        <option value="Polytechnic">Polytechnic</option>
+        <option value="Hotel Management">Hotel Management</option>
+      </select>
+
+      <label for="department">Department:</label>
+      <select id="department" name="department" required>
+        <option value="">--Select Department--</option>
+        <option value="Computer Science">Computer Science</option>
+        <option value="Civil">Civil</option>
+        <option value="Electrical">Electrical</option>
+        <option value="Mechanical">Mechanical</option>
+      </select>
+
+      <label for="subject">Subject:</label>
+      <input type="text" id="subject" name="subject" required />
+
+      <label for="teacher">Teacher Name:</label>
+      <input type="text" id="teacher" name="teacher" required />
+
+      <label for="feedback">Your Feedback:</label>
+      <textarea id="feedback" name="feedback" rows="4" required></textarea>
+
+      <button type="submit">Submit</button>
+   
+    </form>
+     
+    </div>
+  </div>
+  <script src="form-validation.js"></script>
+</body>
+</html>
