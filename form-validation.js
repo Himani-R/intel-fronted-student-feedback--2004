@@ -25,7 +25,7 @@ async function validateForm() {
 
   try {
     // 4. Send to backend
-    const res = await fetch("https://intel-student-feedback-backend-2004.onrender.com", {
+    const res = await fetch("https://intel-student-feedback-backend-2004.onrender.com/submit-feedback", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload)
